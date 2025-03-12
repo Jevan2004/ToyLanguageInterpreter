@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toylanguagegui.MainWindowController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toy Interpreter" textAlignment="CENTER" wrappingWidth="599.92578125" />
+      <HBox prefHeight="29.0" prefWidth="600.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Output List" textAlignment="CENTER" wrappingWidth="189.13671875" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="FileTable" textAlignment="CENTER" wrappingWidth="197.13671875" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Program States" textAlignment="CENTER" wrappingWidth="95.13671875" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nr.prgs:" />
+            <Label fx:id="numberOfPrograms" prefHeight="17.0" prefWidth="49.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="285.0" prefWidth="682.0">
+         <children>
+            <VBox prefHeight="263.0" prefWidth="190.0">
+               <children>
+                  <ListView fx:id="outListView" prefHeight="146.0" prefWidth="190.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heap table" textAlignment="CENTER" wrappingWidth="188.650390625" />
+                  <TableView fx:id="heapList" prefHeight="150.0" prefWidth="190.0">
+                    <columns>
+                      <TableColumn fx:id="address" prefWidth="99.0" text="Address" />
+                      <TableColumn fx:id="value" prefWidth="90.0" text="Value" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="286.0" prefWidth="197.0">
+               <children>
+                  <ListView fx:id="fileTableView" prefHeight="153.0" prefWidth="197.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SymTable" textAlignment="CENTER" wrappingWidth="196.13671875" />
+                  <TableView fx:id="SymTableView" prefHeight="157.0" prefWidth="197.0">
+                    <columns>
+                      <TableColumn fx:id="VarNamCol" prefWidth="95.0" text="Var name" />
+                      <TableColumn fx:id="ValueCol" prefWidth="101.0" text="Value" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="285.0" prefWidth="189.0">
+               <children>
+                  <ListView fx:id="programStatesList" prefHeight="133.0" prefWidth="189.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Exe Stack" textAlignment="CENTER" wrappingWidth="188.13671875" />
+                  <ListView fx:id="ExeStackView" prefHeight="138.0" prefWidth="189.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="283.0" prefWidth="294.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BarrierTable" textAlignment="CENTER" wrappingWidth="291.13671875" />
+                  <TableView fx:id="barrierTableTable" prefHeight="267.0" prefWidth="293.0">
+                    <columns>
+                      <TableColumn fx:id="indexCol" prefWidth="85.0" text="Index" />
+                      <TableColumn fx:id="valueBarrierCol" prefWidth="70.0" text="Value" />
+                        <TableColumn fx:id="listOfValuesCol" prefWidth="135.0" text="ListOfValues" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Button fx:id="runProgram" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Run" textAlignment="CENTER" />
+            <Button fx:id="RunOneStepButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Run one step" />
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="822.0" spacing="20.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Loaded program" wrappingWidth="96.41796875" />
+            <TextArea fx:id="selectedProgram" prefHeight="37.0" prefWidth="292.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

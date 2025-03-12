@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toylanguagegui.ProgramSelectorWindow">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="601.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select a program" textAlignment="CENTER" wrappingWidth="602.13671875" />
+            <ListView fx:id="programList" prefHeight="384.0" prefWidth="601.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></ListView>
+            <Button fx:id="selectButton" mnemonicParsing="false" prefHeight="20.0" prefWidth="332.0" text="Select" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="130.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></Button>
+         </children></VBox>
+   </children>
+</AnchorPane>
